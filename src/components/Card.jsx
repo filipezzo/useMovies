@@ -1,6 +1,6 @@
 import { Calendar } from "lucide-react";
 
-export function Card({ movie: { Title, Poster, imdbID }, onGetDetails }) {
+export function Card({ movie: { Title, Poster, Year, imdbID }, onGetDetails }) {
   return (
     <li
       onClick={() => onGetDetails(imdbID)}
@@ -19,7 +19,7 @@ export function Card({ movie: { Title, Poster, imdbID }, onGetDetails }) {
           <span>
             <Calendar size={18} />
           </span>
-          <span>2022-08-06</span>
+          <span>{Year}</span>
         </p>
       </div>
     </li>
